@@ -45,4 +45,20 @@ public class BeasiswaArray {
 
         jumlahData++;
         System.out.println("Pendaftar berhasil disimpan. Total pendaftar: " + jumlahData);
+    } 
+
+    static void tampilkanSemua() {
+        if (jumlahData == 0) {
+            System.out.println("Belum ada pendaftar.");
+            return;
+        }
+
+        System.out.println("------------------------------------------------------------");
+        System.out.println("Nama\t\tNIM\t\tIPK\tJenis\t\tPenghasilan");
+        System.out.println("------------------------------------------------------------");
+
+        for (int i = 0; i < jumlahData; i++) {
+            System.out.printf("%s\t\t%s\t\t%.2f\t%s\t\t%d\n",
+                nama[i], nim[i], ipk[i], jenis[i], penghasilan[i]);
+        }
     }
